@@ -57,6 +57,7 @@
      <Compile Include="Assets\_Scripts\Bullet.cs" />
      <Compile Include="Assets\_Scripts\EnemyDamage.cs" />
      <Compile Include="Assets\_Scripts\EnemyFollow.cs" />
+     <Compile Include="Assets\_Scripts\EnemySpawnerScript.cs" />
      <Compile Include="Assets\_Scripts\FaceTarget.cs" />
      <Compile Include="Assets\_Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\_Scripts\Shooting.cs" />

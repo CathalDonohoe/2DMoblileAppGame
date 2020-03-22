@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4415753421399171512}
   - component: {fileID: 2593701955173672610}
   m_Layer: 0
-  m_Name: enemy
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,6 +96,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2.5
+  playerDeathsound: {fileID: 8300000, guid: 0ebcdf0b868769840b644df51d3a92a5, type: 3}
+  EnemyDeathSound: {fileID: 8300000, guid: 85a4d7f60142e234aa0892912e7fb585, type: 3}
+  deathVolume: 0.5
 --- !u!61 &6998721425171444113
 BoxCollider2D:
   m_ObjectHideFlags: 0
