@@ -13,9 +13,8 @@ GameObject:
   - component: {fileID: 5459532905805032656}
   - component: {fileID: 5459532905805032671}
   - component: {fileID: 5459532905805032670}
-  - component: {fileID: 5459532905805032669}
   m_Layer: 0
-  m_Name: enemyworking
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -141,16 +140,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.061456572}
   serializedVersion: 2
   m_Radius: 0.75630856
---- !u!114 &5459532905805032669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5459532905805032668}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6265ed1a9dd2c043a1fa3f51795654b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
