@@ -18,6 +18,15 @@ public class EnemyFollow : MonoBehaviour
     [SerializeField] [Range(0f, 1.0f)] private float deathVolume = 0.5f;
 
 
+    bool waitActive = false; //so wait function wouldn't be called many times per frame
+ 
+    IEnumerator Wait()
+    {
+        waitActive = true;
+        yield return new WaitForSeconds (3.0f);
+        waitActive = false;
+    }
+
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
@@ -60,12 +69,20 @@ public class EnemyFollow : MonoBehaviour
         if (player)//if player != null
         {
             //inflict damage on player?
+            if (!waitActive)
+            {
+                Health.healthValue -= 10;
+                StartCoroutine(Wait()); 
+            }
 
             //destroy enemy
             //play when player is killed
-            AudioSource.PlayClipAtPoint(playerDeathsound, Camera.main.transform.position, deathVolume);
-            Destroy(player.gameObject);
-            Destroy(gameObject);
+            if (Health.healthValue <= 0)
+            {
+                AudioSource.PlayClipAtPoint(playerDeathsound, Camera.main.transform.position, deathVolume);
+                Destroy(player.gameObject);
+                Destroy(gameObject);
+            }
         }
 
         if (bullet)//if player != null
@@ -82,6 +99,11 @@ public class EnemyFollow : MonoBehaviour
            // PublishEnemyKilledEvent();
            //Destroys enemy
             Destroy(gameObject);
+            Score.scoreValue += 10;
+
+            if (Score.scoreValue > 2000){
+
+            }
         }
 
 
