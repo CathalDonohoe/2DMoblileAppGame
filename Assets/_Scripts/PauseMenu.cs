@@ -54,9 +54,13 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadMenu()
     {
+        Health.healthValue = 100;
+        Score.scoreValue = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex -1);
 
     }
+
+  
 
     public void QuitGame()
     {

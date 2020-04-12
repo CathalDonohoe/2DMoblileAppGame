@@ -82,6 +82,9 @@ public class EnemyFollow : MonoBehaviour
                 AudioSource.PlayClipAtPoint(playerDeathsound, Camera.main.transform.position, deathVolume);
                 Destroy(player.gameObject);
                 Destroy(gameObject);
+                Health.healthValue = 100;
+                Score.scoreValue = 0;
+                Application.LoadLevel(Application.loadedLevel);
             }
         }
 
@@ -101,9 +104,7 @@ public class EnemyFollow : MonoBehaviour
             Destroy(gameObject);
             Score.scoreValue += 10;
 
-            if (Score.scoreValue > 2000){
-
-            }
+            
         }
 
 
