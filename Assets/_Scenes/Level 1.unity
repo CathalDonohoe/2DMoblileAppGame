@@ -1399,7 +1399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 5459532905805032668, guid: a73b008150d667f4c845ccc718f0f443, type: 3}
-  spawnRate: 2
+  spawnRate: 1
 --- !u!4 &730334601
 Transform:
   m_ObjectHideFlags: 0
@@ -2573,7 +2573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4502db7b16cb46244bce7307206ba095, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 0}
+  pauseMenuUI: {fileID: 889266294}
 --- !u!1 &1481408642
 GameObject:
   m_ObjectHideFlags: 0
