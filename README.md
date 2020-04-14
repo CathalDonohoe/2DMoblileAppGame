@@ -8,3 +8,4 @@ Enemy Spawners: https://www.youtube.com/watch?v=AI8XNNRpTTw
 Main Menu: https://www.youtube.com/watch?v=zc8ac_qUXQY
 score: https://www.youtube.com/watch?v=QbqnDbexrCw
 Sound slider: https://www.youtube.com/watch?v=QZDw8ycoLRw
+Enemy 2 follow: https://www.youtube.com/watch?v=_Z1t7MNk0c4
