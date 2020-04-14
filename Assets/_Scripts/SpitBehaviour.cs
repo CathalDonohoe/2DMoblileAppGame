@@ -24,19 +24,15 @@ public class SpitBehaviour : MonoBehaviour
 
         if(transform.position.x == target.x && transform.position.y == target.y){
             DestroyProjectile();
-            Debug.Log("Enter area");
         }
     }
 
     private void OnTriggerEnter2D(Collider2D whatHitMe)
     {
-        Debug.Log("Enter trigger");
         var players = whatHitMe.GetComponent<PlayerMovement>();
         
         if(players){
-            Debug.Log("Enter player");
             Health.healthValue -= 10;
-            Debug.Log("mius");
             DestroyProjectile();
             
 

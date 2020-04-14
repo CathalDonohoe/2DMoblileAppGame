@@ -64,6 +64,7 @@
      <Compile Include="Assets\_Scripts\EnemySpawnerScript.cs" />
      <Compile Include="Assets\_Scripts\FaceTarget.cs" />
      <Compile Include="Assets\_Scripts\Health.cs" />
+     <Compile Include="Assets\_Scripts\healthPickup.cs" />
      <Compile Include="Assets\_Scripts\MainMenu.cs" />
      <Compile Include="Assets\_Scripts\OptionsMenu.cs" />
      <Compile Include="Assets\_Scripts\PauseMenu.cs" />
