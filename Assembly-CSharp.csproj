@@ -56,6 +56,9 @@
      <Compile Include="Assets\_Scripts\Boundaries.cs" />
      <Compile Include="Assets\_Scripts\Bullet.cs" />
      <Compile Include="Assets\_Scripts\ChangeLevel.cs" />
+     <Compile Include="Assets\_Scripts\Enemy2Follow.cs" />
+     <Compile Include="Assets\_Scripts\Enemy2Spawner.cs" />
+     <Compile Include="Assets\_Scripts\Enemy3Follow.cs" />
      <Compile Include="Assets\_Scripts\EnemyDamage.cs" />
      <Compile Include="Assets\_Scripts\EnemyFollow.cs" />
      <Compile Include="Assets\_Scripts\EnemySpawnerScript.cs" />
@@ -67,7 +70,8 @@
      <Compile Include="Assets\_Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\_Scripts\Score.cs" />
      <Compile Include="Assets\_Scripts\Shooting.cs" />
-     <Compile Include="Assets\_Scripts\sound.cs" />
+     <Compile Include="Assets\_Scripts\Sound.cs" />
+     <Compile Include="Assets\_Scripts\SpitBehaviour.cs" />
      <Compile Include="Assets\_Scripts\Utilities\ListUtils.cs" />
      <Compile Include="Assets\_Scripts\Utilities\SceneNames.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />

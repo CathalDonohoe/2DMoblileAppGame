@@ -546,6 +546,51 @@ RectTransform:
   m_AnchoredPosition: {x: 25.799988, y: -10.399994}
   m_SizeDelta: {x: 190.1, y: 190.5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &326931191
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 326931193}
+  - component: {fileID: 326931192}
+  m_Layer: 0
+  m_Name: Enemy2Spawner2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &326931192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326931191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 470856068803b5a4c91e7304db64ca26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 919851678133075723, guid: 7f95707030789054b846de0c3696613e, type: 3}
+  spawnRate: 2
+--- !u!4 &326931193
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326931191}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 58.8, y: 0.1, z: -0.14453125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &336012551
 GameObject:
   m_ObjectHideFlags: 0
@@ -1399,7 +1444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 5459532905805032668, guid: a73b008150d667f4c845ccc718f0f443, type: 3}
-  spawnRate: 0.5
+  spawnRate: 1
 --- !u!4 &730334601
 Transform:
   m_ObjectHideFlags: 0
@@ -2837,6 +2882,7 @@ GameObject:
   - component: {fileID: 1704161689}
   - component: {fileID: 1704161688}
   - component: {fileID: 1704161690}
+  - component: {fileID: 1704161691}
   m_Layer: 0
   m_Name: BGSound
   m_TagString: Untagged
@@ -2966,6 +3012,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3463bb1af4f852243ad0f01381849dfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1704161691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704161687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f48148f20fd91e478e71acf6673bb8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1758884986
 GameObject:
   m_ObjectHideFlags: 0
@@ -3079,6 +3137,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1775134158
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1775134160}
+  - component: {fileID: 1775134159}
+  m_Layer: 0
+  m_Name: Enemy2Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1775134159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775134158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 470856068803b5a4c91e7304db64ca26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 919851678133075723, guid: 7f95707030789054b846de0c3696613e, type: 3}
+  spawnRate: 2
+--- !u!4 &1775134160
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775134158}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -64.5, y: 1.7, z: -0.14453125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1796628930
 GameObject:
   m_ObjectHideFlags: 0
@@ -3490,6 +3593,10 @@ PrefabInstance:
       propertyPath: GunshotSound
       value: 
       objectReference: {fileID: 8300000, guid: 42ff81f583cffcf4780777e523295d10, type: 3}
+    - target: {fileID: 1515074170, guid: aec2854d39d566745b4d211e041714b3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1515074173, guid: aec2854d39d566745b4d211e041714b3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: aec2854d39d566745b4d211e041714b3, type: 3}
