@@ -53,7 +53,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\_Scripts\Boundaries.cs" />
      <Compile Include="Assets\_Scripts\Bullet.cs" />
      <Compile Include="Assets\_Scripts\ChangeLevel.cs" />
      <Compile Include="Assets\_Scripts\Enemy2Follow.cs" />
@@ -62,7 +61,6 @@
      <Compile Include="Assets\_Scripts\EnemyDamage.cs" />
      <Compile Include="Assets\_Scripts\EnemyFollow.cs" />
      <Compile Include="Assets\_Scripts\EnemySpawnerScript.cs" />
-     <Compile Include="Assets\_Scripts\FaceTarget.cs" />
      <Compile Include="Assets\_Scripts\Health.cs" />
      <Compile Include="Assets\_Scripts\healthPickup.cs" />
      <Compile Include="Assets\_Scripts\MainMenu.cs" />

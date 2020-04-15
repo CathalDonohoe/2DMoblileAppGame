@@ -4,22 +4,17 @@ using UnityEngine;
 
 public class Enemy2Spawner : MonoBehaviour
 {
-     
+    //declaration of variables
     public GameObject enemy;
     float randX;
     Vector2 whereToSpawn;
     public float spawnRate = 2f;
     float nextSpawn = 0.0f;
 
-    
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
+        //for spawning enemy
         if (Time.time > nextSpawn)
         {
             nextSpawn = Time.time + spawnRate;

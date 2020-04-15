@@ -6,8 +6,6 @@ public class EnemyDamage : MonoBehaviour
 {
     public int health = 1;
 
-    public GameObject deathEffect;
-
     public void TakeDamage(int damage)
     {
         health -= damage;
@@ -20,7 +18,6 @@ public class EnemyDamage : MonoBehaviour
 
     void KillEnemy()
     {
-        //Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 

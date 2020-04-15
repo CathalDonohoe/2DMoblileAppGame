@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-
+    //declaration of variables
     public static int healthValue = 100;
     Text health;
 
@@ -17,7 +17,8 @@ public class Health : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   
+        //for health UI
         health.text = "Health: " + healthValue;
     }
 }

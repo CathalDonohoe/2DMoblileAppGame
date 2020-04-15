@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyFollow : MonoBehaviour
 {
 
-
+    //declaration of variables
     public float speed;
     private Rigidbody2D rb;
     private Transform target;
@@ -60,15 +60,13 @@ public class EnemyFollow : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D whatHitMe)
     {
         //param is collider comp of whatever hit me -
-        //different behaviour required
-        //could check the tag type for the object
-        //could check for different components
+        //different behaviour required could check for different components
         var player = whatHitMe.GetComponent<PlayerMovement>();
         var bullet = whatHitMe.GetComponent<Bullet>();
 
         if (player)//if player != null
         {
-            //inflict damage on player?
+            //pause so player doesnt get continuously damaged
             if (!waitActive)
             {
                 Health.healthValue -= 10;
@@ -88,20 +86,16 @@ public class EnemyFollow : MonoBehaviour
             }
         }
 
-        if (bullet)//if player != null
+        if (bullet)//if bullet != null
         {
             
             //plays when enemy is shot
             AudioSource.PlayClipAtPoint(EnemyDeathSound, Camera.main.transform.position, deathVolume);
-           // GameObject explosion = Instantiate(explosionFX,
-            //                                  transform.position,
-            //                                  transform.rotation);
-           // Destroy(explosion, explosionDuration);
            //Destroys bullet
             Destroy(bullet.gameObject);
-           // PublishEnemyKilledEvent();
            //Destroys enemy
             Destroy(gameObject);
+            //adds 10 to score
             Score.scoreValue += 10;
 
             

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy2Follow : MonoBehaviour
 {
 
-
+    //declaration of variables
     public float speed;
     public float stoppingDistance;
     public float retreatDistance;
@@ -24,14 +24,17 @@ public class Enemy2Follow : MonoBehaviour
 
     void Start()
     {
+        //finds player and moves towards him
         player = GameObject.FindGameObjectWithTag("Player").transform;
-
+        //so enemy doesnt shoot constantly
         timeBtwShots = startTimeBtwShots;
     }
     private void Update()
     {
+        //constantly rotates towards player
         RotateTowards(player.position);
 
+        // calculates didstance between player and enemy, and either advances, stops or retreats based on this distance
         if (Vector2.Distance(transform.position, player.position) > stoppingDistance)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
@@ -46,7 +49,7 @@ public class Enemy2Follow : MonoBehaviour
         }
         
 
-
+        //timer to stop enemy from constantly firing
         if(timeBtwShots <= 0){
             Instantiate(projecttile, transform.position, Quaternion.identity);
             timeBtwShots = startTimeBtwShots;
@@ -57,11 +60,13 @@ public class Enemy2Follow : MonoBehaviour
     }
     
     
+    //transform  position to the players position
     private void MoveTowards(Vector2 target)
     {
         transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
     }
 
+    //rotate sprite to face player
     private void RotateTowards(Vector2 target)
     {
         var offset = 0f;
@@ -76,26 +81,20 @@ public class Enemy2Follow : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D whatHitMe)
     {
         //param is collider comp of whatever hit me -
-        //different behaviour required
-        //could check the tag type for the object
-        //could check for different components
+        //different behaviour required could check for different components
         var player = whatHitMe.GetComponent<PlayerMovement>();
         var bullet = whatHitMe.GetComponent<Bullet>();
 
         if (bullet)//if player != null
         {
             
-            //plays when enemy is shot
+            //plays when enemy is in contact
             AudioSource.PlayClipAtPoint(EnemyDeathSound, Camera.main.transform.position, deathVolume);
-           // GameObject explosion = Instantiate(explosionFX,
-            //                                  transform.position,
-            //                                  transform.rotation);
-           // Destroy(explosion, explosionDuration);
            //Destroys bullet
             Destroy(bullet.gameObject);
-           // PublishEnemyKilledEvent();
            //Destroys enemy
             Destroy(gameObject);
+            //adds 20 to score
             Score.scoreValue += 20;
 
             

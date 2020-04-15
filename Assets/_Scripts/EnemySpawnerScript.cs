@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemySpawnerScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    //declaration of variables
     
     public GameObject enemy;
     float randX;
@@ -12,15 +12,11 @@ public class EnemySpawnerScript : MonoBehaviour
     public float spawnRate = 2f;
     float nextSpawn = 0.0f;
 
-    
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
+        //timer for spawning enemies
         if (Time.time > nextSpawn)
         {
             nextSpawn = Time.time + spawnRate;

@@ -6,6 +6,7 @@ public class Enemy3Follow : MonoBehaviour
 {
 
 
+    //declaration of variables
     public float speed;
     private Rigidbody2D rb;
     private Transform target;
@@ -41,10 +42,13 @@ public class Enemy3Follow : MonoBehaviour
         }
     }
     
+    //transform  position to the players position
     private void MoveTowards(Vector2 target)
     {
         transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
     }
+
+    //rotate sprite to face player
 
     private void RotateTowards(Vector2 target)
     {
@@ -60,9 +64,7 @@ public class Enemy3Follow : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D whatHitMe)
     {
         //param is collider comp of whatever hit me -
-        //different behaviour required
-        //could check the tag type for the object
-        //could check for different components
+        //different behaviour required could check for different components
         var player = whatHitMe.GetComponent<PlayerMovement>();
         var bullet = whatHitMe.GetComponent<Bullet>();
 
@@ -71,7 +73,7 @@ public class Enemy3Follow : MonoBehaviour
             //inflict damage on player?
             if (!waitActive)
             {
-                Health.healthValue -= 10;
+                Health.healthValue -= 20;
                 StartCoroutine(Wait()); 
             }
 
@@ -101,6 +103,7 @@ public class Enemy3Follow : MonoBehaviour
            
                 //Destroys enemy
                 Destroy(gameObject);
+                //adds 50 to score
                 Score.scoreValue += 50;
             }
             

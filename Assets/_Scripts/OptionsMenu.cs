@@ -6,6 +6,7 @@ public class OptionsMenu : MonoBehaviour
 {
     public AudioMixer audioMixer;
 
+    //for scaling audio
     public void SetVolume (float volume)
     {
         audioMixer.SetFloat("volume", volume);

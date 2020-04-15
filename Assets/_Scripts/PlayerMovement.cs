@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+    //declaration of variables
     public float moveSpeed = 7.5f;
     private Rigidbody2D rb;
     public Camera cam;
@@ -24,10 +26,9 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         //Input
-
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-
+        //mouse
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
     }
 

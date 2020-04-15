@@ -5,22 +5,13 @@ using UnityEngine;
 public class healthPickup : MonoBehaviour
 {
     public int healthAmount = 30;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        //if in contact with player
         if (other.tag == "Player")
         {
+            //if health is below 100
             if(Health.healthValue < 100)
             {
                 Health.healthValue += healthAmount;
